@@ -122,7 +122,7 @@
       document.body.appendChild(script);
     </script>
     <!-- **** Add code that uses the myGameInstance here.  This is where you can communicate with unity through javascript -->
-    <!-- JavascriptHook is a C# script which contains the functions TintRed and TentGreen -->
+    <!-- **** JavascriptHook is a C# script which contains the functions TintRed and TentGreen -->
       <button style="border:solid 1px black; width:200px; height:30px; margin:auto; text-align:center" onclick ="window.alert('TEST')">NativeJavascriptTest</button>
       <button style="border:solid 1px black; width:200px; height:30px; margin:auto; text-align:center" onclick ="myGameInstance.SendMessage('JavascriptHook', 'TintRed')">RED</button>
       <button style="border:solid 1px black; width:200px; height:30px; margin:auto; text-align:center" onclick ="myGameInstance.SendMessage('JavascriptHook', 'TintGreen')">GREEN</button>
