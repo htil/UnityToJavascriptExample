@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class JavascriptHook : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer circleSpriteRenderer;
+    [SerializeField] TMP_Text textField;
 
     public void TintRed()
     {
@@ -14,6 +16,21 @@ public class JavascriptHook : MonoBehaviour
     public void TintGreen()
     {
         circleSpriteRenderer.color = Color.green;
+    }
+    public void TintColor(string value)
+    {
+          if (ColorUtility.TryParseHtmlString(value, out Color color))
+    {
+        circleSpriteRenderer.color = color;
+    }
+    else
+    {
+        Debug.LogError("Invalid color code: " + value);
+    }
+    }
+    public void UpdateText(string newText)
+    {
+        textField.text = newText;
     }
 
     private void Update()
