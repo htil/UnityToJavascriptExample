@@ -1,27 +1,15 @@
+using System.Text;
 using UnityEngine;
 using System.Runtime.InteropServices;
 
 public class uToJS : MonoBehaviour {
 
-    //[DllImport("__Internal")]
-    //private static extern void Hello();
-
     [DllImport("__Internal")]
-    private static extern void HelloString(string str);
-
-    //[DllImport("__Internal")]
-    //private static extern void PrintFloatArray(float[] array, int size);
-
-    //[DllImport("__Internal")]
-   // private static extern int AddNumbers(int x, int y);
-
-    //[DllImport("__Internal")]
-    //private static extern string StringReturnValueFunction();
-
-    //[DllImport("__Internal")]
-    //private static extern void BindWebGLTexture(int texture);
+    private static extern void HelloString(byte[] str);
 
     public void HelloWorldCall() {
-        HelloString("Hello World!");
+        string message = "Hello World!";
+        byte[] utf8Bytes = Encoding.UTF8.GetBytes(message);
+        HelloString(utf8Bytes);
     }
 }
