@@ -45,4 +45,16 @@ public class JavascriptHook : MonoBehaviour
             TintGreen();
         }
     }
+
+    public void MakeItRain()
+    {
+        Debug.Log("Make it rain!");
+    }
+
+    public void spawnDino()
+    {
+        Debug.Log("Spawn a single Dino!");
+    }
+
+
 }
