@@ -46,15 +46,4 @@ public class JavascriptHook : MonoBehaviour
         }
     }
 
-    public void MakeItRain()
-    {
-        Debug.Log("Make it rain!");
-    }
-
-    public void spawnDino()
-    {
-        Debug.Log("Spawn a single Dino!");
-    }
-
-
 }
