@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour
     }
     public void SpawnPrefabByColorRGB(string values)
     {
-        
+        tField.text = values;
         Debug.Log("RGB values: " + values);
         string[] rgb = values.Split(',');
         float r = float.Parse(rgb[0]) / 255f;
